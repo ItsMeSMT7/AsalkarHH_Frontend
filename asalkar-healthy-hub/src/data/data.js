@@ -1,3 +1,22 @@
+import coconutOil500ml from './Products/coconut-oil-500ml.jpeg';
+import coconutOil1ltr from './Products/coconut-oil-1ltr.jpeg';
+
+import groundnutOil500ml from './Products/groundnut-oil-500ml.jpeg';
+import groundnutOil1ltr from './Products/groundnut-oil-1ltr.jpeg';
+import groundnutOil5ltr from './Products/groundnut-oil-5ltr.jpeg';
+
+import sunflowerOil500ml from './Products/sunflower-oil-500ml.jpeg';
+import sunflowerOil1ltr from './Products/sunflower-oil-1ltr.jpeg';
+import sunflowerOil5ltr from './Products/sunflower-oil-5ltr.jpeg';
+
+import safflowerOil500ml from './Products/safflower-oil-500ml.jpeg';
+import safflowerOil5ltr from './Products/safflower-oil-5ltr.jpeg';
+
+import groundnutOilCake1kg from './Products/Groundnut-pend.jpeg';
+import coconutOilCake1kg from './Products/Coconut-pend.jpeg';
+import safflowerOilCake1kg from './Products/Safflower-pend.jpeg';
+import sunflowerOilCake1kg from './Products/Sunflower-pend.jpeg';
+
 export const navLinks = [
   { id: 1, label: 'Home', path: '/' },
   { id: 2, label: 'Products', path: '/products' },
@@ -13,40 +32,40 @@ export const contactInfo = {
   hours: 'Monday – Saturday: 9:00 AM – 7:00 PM',
   hoursClosed: 'Sunday: Closed',
   whatsapp: '918421429515',
-  owner: 'Rajakumar Asalkar'
+  owner: 'Rajkumar Asalkar'
 }
 
 export const products = [
-  {
-    id: 1,
-    name: 'Cold Pressed Coconut Oil',
-    category: 'Coconut Oil',
-    size: '50ml',
-    price: 45,
-    description: 'Pure virgin coconut oil for cooking and wellness',
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
-  {
-    id: 2,
-    name: 'Cold Pressed Coconut Oil',
-    category: 'Coconut Oil',
-    size: '250ml',
-    price: 120,
-    description: 'Pure virgin coconut oil for cooking and wellness',
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80',
-    badge: 'Bestseller',
-    inStock: true
-  },
+  // {
+  //   id: 1,
+  //   name: 'Cold Pressed Coconut Oil',
+  //   category: 'Coconut Oil',
+  //   size: '50ml',
+  //   price: 45,
+  //   description: 'Pure virgin coconut oil for cooking and wellness',
+  //   image: coconutOil500ml,
+  //   badge: null,
+  //   inStock: true
+  // },
+  // {
+  //   id: 2,
+  //   name: 'Cold Pressed Coconut Oil',
+  //   category: 'Coconut Oil',
+  //   size: '250ml',
+  //   price: 120,
+  //   description: 'Pure virgin coconut oil for cooking and wellness',
+  //   image: coconutOil500ml,
+  //   badge: 'Bestseller',
+  //   inStock: true
+  // },
   {
     id: 3,
     name: 'Cold Pressed Coconut Oil',
     category: 'Coconut Oil',
     size: '500ml',
-    price: 220,
+    price: 330,
     description: 'Pure virgin coconut oil for cooking and wellness',
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80',
+    image: coconutOil500ml,
     badge: null,
     inStock: true
   },
@@ -55,53 +74,53 @@ export const products = [
     name: 'Cold Pressed Coconut Oil',
     category: 'Coconut Oil',
     size: '1 Litre',
-    price: 420,
+    price: 650,
     description: 'Pure virgin coconut oil for cooking and wellness',
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80',
+    image: coconutOil1ltr,
     badge: null,
     inStock: true
   },
-  {
-    id: 5,
-    name: 'Cold Pressed Coconut Oil',
-    category: 'Coconut Oil',
-    size: '5 Litre',
-    price: 1999,
-    description: 'Pure virgin coconut oil for cooking and wellness',
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
-  {
-    id: 6,
-    name: 'Cold Pressed Groundnut Oil',
-    category: 'Groundnut Oil',
-    size: '50ml',
-    price: 40,
-    description: 'Traditional wood pressed peanut oil for everyday cooking',
-    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
-  {
-    id: 7,
-    name: 'Cold Pressed Groundnut Oil',
-    category: 'Groundnut Oil',
-    size: '250ml',
-    price: 100,
-    description: 'Traditional wood pressed peanut oil for everyday cooking',
-    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
+  // {
+  //   id: 5,
+  //   name: 'Cold Pressed Coconut Oil',
+  //   category: 'Coconut Oil',
+  //   size: '5 Litre',
+  //   price: 1999,
+  //   description: 'Pure virgin coconut oil for cooking and wellness',
+  //   image: coconutOil1ltr,
+  //   badge: null,
+  //   inStock: true
+  // },
+  // {
+  //   id: 6,
+  //   name: 'Cold Pressed Groundnut Oil',
+  //   category: 'Groundnut Oil',
+  //   size: '50ml',
+  //   price: 40,
+  //   description: 'Traditional Cold pressed peanut oil for everyday cooking',
+  //   image: groundnutOil500ml,
+  //   badge: null,
+  //   inStock: true
+  // },
+  // {
+  //   id: 7,
+  //   name: 'Cold Pressed Groundnut Oil',
+  //   category: 'Groundnut Oil',
+  //   size: '250ml',
+  //   price: 100,
+  //   description: 'Traditional Cold pressed peanut oil for everyday cooking',
+  //   image: groundnutOil500ml,
+  //   badge: null,
+  //   inStock: true
+  // },
   {
     id: 8,
     name: 'Cold Pressed Groundnut Oil',
     category: 'Groundnut Oil',
     size: '500ml',
-    price: 180,
-    description: 'Traditional wood pressed peanut oil for everyday cooking',
-    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
+    price: 130,
+    description: 'Traditional Cold pressed peanut oil for everyday cooking',
+    image: groundnutOil500ml,
     badge: 'Popular',
     inStock: true
   },
@@ -110,9 +129,9 @@ export const products = [
     name: 'Cold Pressed Groundnut Oil',
     category: 'Groundnut Oil',
     size: '1 Litre',
-    price: 340,
-    description: 'Traditional wood pressed peanut oil for everyday cooking',
-    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
+    price: 250,
+    description: 'Traditional Cold pressed peanut oil for everyday cooking',
+    image: groundnutOil1ltr,
     badge: null,
     inStock: true
   },
@@ -121,42 +140,42 @@ export const products = [
     name: 'Cold Pressed Groundnut Oil',
     category: 'Groundnut Oil',
     size: '5 Litre',
-    price: 1599,
-    description: 'Traditional wood pressed peanut oil for everyday cooking',
-    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
+    price: 1200,
+    description: 'Traditional Cold pressed peanut oil for everyday cooking',
+    image: groundnutOil5ltr,
     badge: null,
     inStock: true
   },
-  {
-    id: 11,
-    name: 'Cold Pressed Sunflower Oil',
-    category: 'Sunflower Oil',
-    size: '50ml',
-    price: 35,
-    description: 'Light and heart-healthy oil rich in Vitamin E',
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
-  {
-    id: 12,
-    name: 'Cold Pressed Sunflower Oil',
-    category: 'Sunflower Oil',
-    size: '250ml',
-    price: 90,
-    description: 'Light and heart-healthy oil rich in Vitamin E',
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
+  // {
+  //   id: 11,
+  //   name: 'Cold Pressed Sunflower Oil',
+  //   category: 'Sunflower Oil',
+  //   size: '50ml',
+  //   price: 35,
+  //   description: 'Light and heart-healthy oil rich in Vitamin E',
+  //   image: sunflowerOil500ml,
+  //   badge: null,
+  //   inStock: true
+  // },
+  // {
+  //   id: 12,
+  //   name: 'Cold Pressed Sunflower Oil',
+  //   category: 'Sunflower Oil',
+  //   size: '250ml',
+  //   price: 90,
+  //   description: 'Light and heart-healthy oil rich in Vitamin E',
+  //   image: sunflowerOil500ml,
+  //   badge: null,
+  //   inStock: true
+  // },
   {
     id: 13,
     name: 'Cold Pressed Sunflower Oil',
     category: 'Sunflower Oil',
     size: '500ml',
-    price: 170,
+    price: 140,
     description: 'Light and heart-healthy oil rich in Vitamin E',
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80',
+    image: sunflowerOil500ml,
     badge: null,
     inStock: true
   },
@@ -165,9 +184,9 @@ export const products = [
     name: 'Cold Pressed Sunflower Oil',
     category: 'Sunflower Oil',
     size: '1 Litre',
-    price: 320,
+    price: 270,
     description: 'Light and heart-healthy oil rich in Vitamin E',
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80',
+    image: sunflowerOil1ltr,
     badge: null,
     inStock: true
   },
@@ -176,42 +195,42 @@ export const products = [
     name: 'Cold Pressed Sunflower Oil',
     category: 'Sunflower Oil',
     size: '5 Litre',
-    price: 1499,
+    price: 1300,
     description: 'Light and heart-healthy oil rich in Vitamin E',
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80',
+    image: sunflowerOil5ltr,
     badge: null,
     inStock: true
   },
-  {
-    id: 16,
-    name: 'Cold Pressed Safflower Oil',
-    category: 'Safflower Oil',
-    size: '50ml',
-    price: 50,
-    description: 'Premium Kardai oil perfect for heart-conscious families',
-    image: 'https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=400&q=80',
-    badge: 'New',
-    inStock: true
-  },
-  {
-    id: 17,
-    name: 'Cold Pressed Safflower Oil',
-    category: 'Safflower Oil',
-    size: '250ml',
-    price: 140,
-    description: 'Premium Kardai oil perfect for heart-conscious families',
-    image: 'https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=400&q=80',
-    badge: null,
-    inStock: true
-  },
+  // {
+  //   id: 16,
+  //   name: 'Cold Pressed Safflower Oil',
+  //   category: 'Safflower Oil',
+  //   size: '50ml',
+  //   price: 50,
+  //   description: 'Premium Kardai oil perfect for heart-conscious families',
+  //   image: safflowerOil500ml,
+  //   badge: 'New',
+  //   inStock: true
+  // },
+  // {
+  //   id: 17,
+  //   name: 'Cold Pressed Safflower Oil',
+  //   category: 'Safflower Oil',
+  //   size: '250ml',
+  //   price: 140,
+  //   description: 'Premium Kardai oil perfect for heart-conscious families',
+  //   image: safflowerOil500ml,
+  //   badge: null,
+  //   inStock: true
+  // },
   {
     id: 18,
     name: 'Cold Pressed Safflower Oil',
     category: 'Safflower Oil',
     size: '500ml',
-    price: 260,
+    price: 165,
     description: 'Premium Kardai oil perfect for heart-conscious families',
-    image: 'https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=400&q=80',
+    image: safflowerOil500ml,
     badge: null,
     inStock: true
   },
@@ -220,9 +239,9 @@ export const products = [
     name: 'Cold Pressed Safflower Oil',
     category: 'Safflower Oil',
     size: '1 Litre',
-    price: 480,
+    price: 320,
     description: 'Premium Kardai oil perfect for heart-conscious families',
-    image: 'https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=400&q=80',
+    image: safflowerOil500ml,
     badge: null,
     inStock: true
   },
@@ -231,9 +250,9 @@ export const products = [
     name: 'Cold Pressed Safflower Oil',
     category: 'Safflower Oil',
     size: '5 Litre',
-    price: 2299,
+    price: 1550,
     description: 'Premium Kardai oil perfect for heart-conscious families',
-    image: 'https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=400&q=80',
+    image: safflowerOil5ltr,
     badge: null,
     inStock: true
   },
@@ -242,9 +261,9 @@ export const products = [
     name: 'Groundnut Oil Cake (Pend)',
     category: 'Oil Cake (Pend)',
     size: '1 Kg',
-    price: 60,
+    price: 45,
     description: 'Nutrient-rich oil cake for cattle feed and organic fertilizer',
-    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80',
+    image: groundnutOilCake1kg,
     badge: null,
     inStock: true
   },
@@ -253,9 +272,9 @@ export const products = [
     name: 'Coconut Oil Cake (Pend)',
     category: 'Oil Cake (Pend)',
     size: '1 Kg',
-    price: 50,
+    price: 45,
     description: 'Natural coconut oil cake for cattle feed and gardening',
-    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80',
+    image: coconutOilCake1kg,
     badge: null,
     inStock: true
   },
@@ -264,9 +283,20 @@ export const products = [
     name: 'Safflower Oil Cake (Pend)',
     category: 'Oil Cake (Pend)',
     size: '1 Kg',
-    price: 55,
+    price: 30,
     description: 'High-protein safflower oil cake for animal nutrition',
-    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80',
+    image: safflowerOilCake1kg,
+    badge: null,
+    inStock: true
+  },
+  {
+    id: 24,
+    name: 'Sunflower Oil Cake (Pend)',
+    category: 'Oil Cake (Pend)',
+    size: '1 Kg',
+    price: 30,
+    description: 'Protein-rich sunflower oil cake ideal for cattle feed and organic farming',
+    image: sunflowerOilCake1kg,
     badge: null,
     inStock: true
   }
@@ -278,16 +308,16 @@ export const featuredProducts = [
     name: 'Cold Pressed Coconut Oil',
     description: 'Pure virgin coconut oil for cooking and wellness',
     startingPrice: 120,
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80',
+    image: coconutOil500ml,
     badge: 'Bestseller',
     category: 'Coconut Oil'
   },
   {
     id: 'fp2',
     name: 'Cold Pressed Groundnut Oil',
-    description: 'Traditional wood pressed peanut oil for everyday cooking',
+    description: 'Traditional Cold pressed peanut oil for everyday cooking',
     startingPrice: 150,
-    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
+    image: groundnutOil500ml,
     badge: 'Popular',
     category: 'Groundnut Oil'
   },
@@ -296,7 +326,7 @@ export const featuredProducts = [
     name: 'Cold Pressed Sunflower Oil',
     description: 'Light and heart-healthy oil rich in Vitamin E',
     startingPrice: 130,
-    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80',
+    image: sunflowerOil500ml,
     badge: null,
     category: 'Sunflower Oil'
   },
@@ -305,7 +335,7 @@ export const featuredProducts = [
     name: 'Cold Pressed Safflower Oil',
     description: 'Premium Kardai oil perfect for heart-conscious families',
     startingPrice: 160,
-    image: 'https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=400&q=80',
+    image: safflowerOil500ml,
     badge: 'New',
     category: 'Safflower Oil'
   }
@@ -321,8 +351,8 @@ export const benefits = [
   {
     id: 2,
     icon: 'hammer',
-    title: 'Wood Cold Pressed',
-    description: 'Extracted using traditional wooden Ghani/Kolhu machines that maintain low temperature during pressing.'
+    title: 'Cold Pressed',
+    description: 'Extracted using traditional Colden Ghani/Kolhu machines that maintain low temperature during pressing.'
   },
   {
     id: 3,
@@ -351,7 +381,7 @@ export const processSteps = [
     step: '02',
     icon: 'press',
     title: 'Cold Pressing',
-    description: 'Seeds are pressed using traditional wooden Ghani machines at low temperature to preserve all nutrients.'
+    description: 'Seeds are pressed using traditional Colden Ghani machines at low temperature to preserve all nutrients.'
   },
   {
     id: 3,
@@ -391,7 +421,7 @@ export const testimonials = [
     name: 'Sunita Patil',
     location: 'Kolhapur',
     rating: 5,
-    quote: 'I was looking for genuinely cold pressed safflower oil and finally found it. You can tell it\'s the real thing from the color and smell. Highly recommended!',
+    quote: 'I was looking for genuinely Cold pressed safflower oil and finally found it. You can tell it\'s the real thing from the color and smell. Highly recommended!',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80'
   },
   {
@@ -408,7 +438,7 @@ export const galleryImages = [
   {
     id: 1,
     src: 'https://images.unsplash.com/photo-1595981234058-a9302fb97229?w=600&q=80',
-    alt: 'Traditional wooden oil press machine',
+    alt: 'Traditional Colden oil press machine',
     category: 'process'
   },
   {
@@ -440,6 +470,24 @@ export const galleryImages = [
     src: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80',
     alt: 'Healthy natural food arrangement',
     category: 'lifestyle'
+  },
+  {
+    id: 7,
+    src: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600&q=80',
+    alt: 'Fresh Groundnuts for Oil Pressing',
+    category: 'ingredients'
+  },
+  {
+    id: 8,
+    src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80',
+    alt: 'Healthy Cooking with Sunflower Oil',
+    category: 'lifestyle'
+  },
+  {
+    id: 9,
+    src: 'https://images.unsplash.com/photo-1585827732971-ce9a3e2c39e2?w=600&q=80',
+    alt: 'Organic Seeds and Nuts Collection',
+    category: 'ingredients'
   }
 ]
 

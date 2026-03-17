@@ -25,7 +25,7 @@ const Benefits = () => {
           <span className="section-subtitle">Why Choose Us</span>
           <h2 className="section-title">The Purity You Can Trust</h2>
           <p className="section-description">
-            Our oils are extracted using the traditional cold press method that preserves
+            Our oils are extracted using the traditional Cold press method that preserves
             all natural nutrients, flavor, and aroma.
           </p>
         </motion.div>

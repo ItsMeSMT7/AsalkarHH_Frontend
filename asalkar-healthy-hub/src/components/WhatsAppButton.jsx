@@ -29,7 +29,7 @@ const WhatsAppButton = () => {
 
   return (
     <a
-      href="https://wa.me/918421429515?text=Hello%2C%20I%20am%20interested%20in%20your%20cold%20pressed%20oils.%20Please%20share%20more%20details."
+      href="https://wa.me/918421429515?text=Hello%2C%20I%20am%20interested%20in%20your%20Cold%20pressed%20oils.%20Please%20share%20more%20details."
       target="_blank"
       rel="noopener noreferrer"
       className={styles.button}

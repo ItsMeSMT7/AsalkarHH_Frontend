@@ -6,7 +6,7 @@ import styles from './Style/TrustBar.module.css'
 const trustMetrics = [
   { id: 1, icon: <LuUsers size={20} />, text: '500+ Happy Customers' },
   { id: 2, icon: <LuShieldCheck size={20} />, text: '100% Chemical Free' },
-  { id: 3, icon: <LuHammer size={20} />, text: 'Traditional Wood Press' },
+  { id: 3, icon: <LuHammer size={20} />, text: 'Traditional Cold Press' },
   { id: 4, icon: <LuLeaf size={20} />, text: 'Fresh & Natural' }
 ]
 

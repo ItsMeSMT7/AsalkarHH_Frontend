@@ -31,7 +31,7 @@ const About = () => {
               >
                 <img
                   src="https://images.unsplash.com/photo-1595981234058-a9302fb97229?w=600&q=80"
-                  alt="Traditional cold press oil machine"
+                  alt="Traditional Cold press oil machine"
                   className={styles.storyImage}
                   loading="lazy"
                 />
@@ -53,11 +53,11 @@ const About = () => {
                 <p className={styles.paragraph}>
                   Asalkar Healthy Hub Vita was founded by Rajakumar Asalkar with a simple yet
                   powerful mission — to bring back the authentic taste and health benefits of
-                  traditional cold pressed oils to every Indian kitchen.
+                  traditional Cold pressed oils to every Indian kitchen.
                 </p>
                 <p className={styles.paragraph}>
                   In an era where most oils are extracted using chemical solvents and extreme heat,
-                  destroying vital nutrients, we chose a different path. We use the age-old wooden
+                  destroying vital nutrients, we chose a different path. We use the age-old Colden
                   Ghani (Kolhu) method where seeds are pressed slowly at low temperatures, preserving
                   all natural vitamins, antioxidants, and flavors.
                 </p>
@@ -83,7 +83,7 @@ const About = () => {
                     </div>
                     <div>
                       <h4 className={styles.highlightTitle}>Health First</h4>
-                      <p className={styles.highlightDesc}>Nutrient-rich cold pressed extraction</p>
+                      <p className={styles.highlightDesc}>Nutrient-rich Cold pressed extraction</p>
                     </div>
                   </div>
                   <div className={styles.highlightItem}>
@@ -113,14 +113,14 @@ const About = () => {
           >
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
-              alt="Rajakumar Asalkar - Founder"
+              alt="Rajkumar Asalkar - Founder"
               className={styles.founderAvatar}
               loading="lazy"
             />
             <h3 className={styles.founderName}>Rajakumar Asalkar</h3>
             <span className={styles.founderTitle}>Founder, Asalkar Healthy Hub Vita</span>
             <blockquote className={styles.founderQuote}>
-              &ldquo;My vision is to make pure, chemical-free cold pressed oils accessible to every
+              &ldquo;My vision is to make pure, chemical-free Cold pressed oils accessible to every
               household. Health is not a luxury — it is a right.&rdquo;
             </blockquote>
           </motion.div>
@@ -160,8 +160,8 @@ const About = () => {
               <div className={styles.valueCard}>
                 <h3 className={styles.valueTitle}>Tradition</h3>
                 <p className={styles.valueDesc}>
-                  We honor the traditional cold press method that has been used for centuries in
-                  India. Our wooden Ghani machines preserve the true essence of every seed.
+                  We honor the traditional Cold press method that has been used for centuries in
+                  India. Our Colden Ghani machines preserve the true essence of every seed.
                 </p>
               </div>
             </motion.div>

@@ -37,6 +37,15 @@
   z-index: 1;
   color: var(--color-primary);
   box-shadow: 0 4px 15px var(--color-card-shadow);
+  transition: all 0.3s ease;
+}
+
+.iconCircle:hover {
+  background: var(--gradient-green);
+  color: white;
+  box-shadow: 0 8px 25px var(--color-card-hover-shadow);
+  transform: translateY(-6px);
+  cursor: pointer;
 }
 
 .connector {

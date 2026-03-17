@@ -4,7 +4,7 @@ import { LuLeaf, LuCheck, LuArrowRight } from 'react-icons/lu'
 import { FaWhatsapp } from 'react-icons/fa'
 import { fadeInUp, staggerContainer } from '../utils/animations'
 import styles from './Style/Hero.module.css'
-
+import combo_oil from "../data/Products/combo_oil.jpeg";
 
 const Hero = () => {
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
               </motion.h1>
 
               <motion.p variants={fadeInUp} className={styles.subtext}>
-                Extracted naturally using traditional wooden press machines. No chemicals.
+                Extracted naturally using traditional Colden press machines. No chemicals.
                 No heat. Just pure nutrition the way nature intended.
               </motion.p>
 
@@ -39,7 +39,7 @@ const Hero = () => {
                   <LuArrowRight size={18} />
                 </Link>
                 <a
-                  href="https://wa.me/918421429515?text=Hello%2C%20I%20am%20interested%20in%20your%20cold%20pressed%20oils."
+                  href="https://wa.me/918421429515?text=Hello%2C%20I%20am%20interested%20in%20your%20Cold%20pressed%20oils."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary-custom"
@@ -56,7 +56,7 @@ const Hero = () => {
                 </span>
                 <span className={styles.trustItem}>
                   <LuCheck size={16} className={styles.trustIcon} />
-                  Wood Pressed
+                  Cold Pressed
                 </span>
                 <span className={styles.trustItem}>
                   <LuCheck size={16} className={styles.trustIcon} />
@@ -75,11 +75,12 @@ const Hero = () => {
             >
               <div className={styles.decorCircle} />
               <div className={styles.decorDot} />
-              <img
-                src="https://images.unsplash.com/photo-1474979266404-7f28db3f3298?w=600&q=80"
-                alt="Premium cold pressed oil bottles"
+              <motion.img
+                src={combo_oil}
+                alt="Premium Cold pressed oil bottles"
                 className={styles.heroImage}
                 loading="eager"
+                whileHover={{ scale: 1.05 }}
               />
             </motion.div>
           </div>

@@ -26,7 +26,7 @@ const FeaturedProducts = () => {
           <span className="section-subtitle">Our Products</span>
           <h2 className="section-title">Handpicked for Your Health</h2>
           <p className="section-description">
-            Explore our range of cold pressed oils — each one crafted with care for your
+            Explore our range of Cold pressed oils — each one crafted with care for your
             family&apos;s wellbeing.
           </p>
         </motion.div>

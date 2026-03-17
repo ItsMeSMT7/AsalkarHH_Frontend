@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { LuShoppingBag, LuMenu, LuX, LuLeaf } from 'react-icons/lu'
+import { LuShoppingBag, LuMenu, LuX } from 'react-icons/lu'
 import { useCart } from '../context/CartContext'
 import { navLinks } from '../data/data'
 import styles from './Style/Navbar.module.css'
+import brandLogo from '../data/Products/logo.png'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -41,7 +42,7 @@ const Navbar = () => {
   const handleOrderNow = (e) => {
     e.preventDefault()
     if (cartCount === 0) {
-      window.open('https://wa.me/918421429515?text=Hello%2C%20I%20am%20interested%20in%20your%20cold%20pressed%20oils.%20Please%20share%20more%20details.', '_blank')
+      window.open('https://wa.me/918421429515?text=Hello%2C%20I%20am%20interested%20in%20your%20Cold%20pressed%20oils.%20Please%20share%20more%20details.', '_blank')
     } else {
       const message = generateWhatsAppMessage()
       if (message) {
@@ -56,7 +57,7 @@ const Navbar = () => {
       <div className="container">
         <nav className={styles.navInner}>
           <Link to="/" className={styles.logo} aria-label="Asalkar Healthy Hub Vita Home">
-            <LuLeaf className={styles.logoIcon} />
+            <img src={brandLogo} alt="Asalkar Healthy Hub Logo" style={{ height: '40px', width: 'auto', objectFit: 'contain', marginRight: '8px' }} />
             <span className={styles.logoTextGreen}>Asalkar</span>
             <span className={styles.logoTextDark}>Healthy Hub</span>
           </Link>
@@ -122,7 +123,7 @@ const Navbar = () => {
             onClick={() => setMobileOpen(false)}
             aria-label="Go to homepage"
           >
-            <LuLeaf className={styles.logoIcon} />
+            <img src={brandLogo} alt="Asalkar Healthy Hub Logo" style={{ height: '32px', width: 'auto', objectFit: 'contain', marginRight: '8px' }} />
             <span className={styles.logoTextGreen}>Asalkar</span>
             <span className={styles.logoTextDark}>HH</span>
           </Link>

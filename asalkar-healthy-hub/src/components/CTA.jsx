@@ -19,7 +19,7 @@ const CTA = () => {
           <LuLeaf size={30} className={styles.icon} />
           <h2 className={styles.headline}>Start Your Healthy Lifestyle Today</h2>
           <p className={styles.subtext}>
-            Order fresh cold pressed oils directly from our farm. Delivered with love to
+            Order fresh Cold pressed oils directly from our farm. Delivered with love to
             your doorstep.
           </p>
           <div className={styles.btnGroup}>
@@ -27,7 +27,7 @@ const CTA = () => {
               Shop Now
             </Link>
             <a
-              href="https://wa.me/918421429515?text=Hello%2C%20I%20would%20like%20to%20order%20cold%20pressed%20oils."
+              href="https://wa.me/918421429515?text=Hello%2C%20I%20would%20like%20to%20order%20Cold%20pressed%20oils."
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnOutline}

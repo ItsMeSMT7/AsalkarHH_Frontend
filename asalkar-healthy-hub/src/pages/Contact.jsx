@@ -91,10 +91,10 @@ const Contact = () => {
                       <div>
                         <h4 className={styles.infoTitle}>{item.title}</h4>
                         <p className={styles.infoDetail}>
-                          {item.detail.split('\n').map((line, i) => (
+                          {(item.detail || '').split('\n').map((line, i, arr) => (
                             <span key={i}>
                               {line}
-                              {i < item.detail.split('\n').length - 1 && <br />}
+                              {i < arr.length - 1 && <br />}
                             </span>
                           ))}
                         </p>
@@ -204,14 +204,14 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.1 }}
           >
             <iframe
-              title="Asalkar Healthy Hub Vita Location — Maharashtra, India"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2659949918086!2d73.84391707465752!3d18.52043098257297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07f4b0b0001%3A0x1234567890abcdef!2sMaharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              title="Asalkar Healthy Hub Vita Location"
+              src="https://maps.google.com/maps?q=Asalkar%20Healthy%20Hub%20Vita&z=15&output=embed"
               width="100%"
               height="350"
               style={{ border: 0, filter: 'saturate(0.8) contrast(0.9)' }}
-              allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           </motion.div>
         </div>

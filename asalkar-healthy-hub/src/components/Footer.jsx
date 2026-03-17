@@ -17,7 +17,7 @@ const Footer = () => {
                 Asalkar Healthy Hub Vita
               </Link>
               <p className={styles.brandDesc}>
-                Pure cold pressed oils extracted using traditional wooden press machines.
+                Pure Cold pressed oils extracted using traditional Colden press machines.
                 Bringing health and authenticity to every Indian kitchen.
               </p>
               <div className={styles.socials}>
