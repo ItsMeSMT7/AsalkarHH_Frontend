@@ -87,7 +87,7 @@ const Footer = () => {
               </li>
               <li className={styles.contactItem}>
                 <LuMapPin size={15} className={styles.contactIcon} />
-                <span>Maharashtra, India</span>
+                <span>Vita, Maharashtra </span>
               </li>
               <li className={styles.contactItem}>
                 <LuClock size={15} className={styles.contactIcon} />

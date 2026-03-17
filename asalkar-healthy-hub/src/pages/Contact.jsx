@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { LuMapPin, LuPhone, LuMail, LuClock, LuSend } from 'react-icons/lu'
-import { FaCheckCircle } from 'react-icons/fa'
+import { LuMapPin, LuPhone, LuMail, LuClock, LuSend, LuCheckCircle } from 'react-icons/lu'
 import { fadeInUp, slideInLeft, slideInRight } from '../utils/animations'
 import { contactInfo } from '../data/data'
 import PageHero from '../components/PageHero'
 import styles from './PagesStyle/Contact.module.css'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' })
@@ -34,7 +34,7 @@ const Contact = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length > 0) {
@@ -42,16 +42,27 @@ const Contact = () => {
       return
     }
 
-    const subject = encodeURIComponent(`Inquiry from ${form.name} - Asalkar Healthy Hub Vita`)
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
-    )
-    window.open(`mailto:${contactInfo.email}?subject=${subject}&body=${body}`)
+    try {
+      await emailjs.send(
+        'service_zwmisx7', // Paste your real Service ID here (e.g., 'service_xyz123')
+        'template_zp2alr8',
+        {
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          message: form.message,
+        },
+        'amoYDw_1-KhXAgCYu'
+      )
 
-    setSubmitted(true)
-    setForm({ name: '', phone: '', email: '', message: '' })
-    setErrors({})
-    setTimeout(() => setSubmitted(false), 5000)
+      setSubmitted(true)
+      setForm({ name: '', phone: '', email: '', message: '' })
+      setErrors({})
+      setTimeout(() => setSubmitted(false), 5000)
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      alert('Something went wrong. Please try again or contact us directly.')
+    }
   }
 
   const infoItems = [
@@ -115,7 +126,7 @@ const Contact = () => {
               >
                 {submitted ? (
                   <div className={styles.success}>
-                    <FaCheckCircle size={48} className={styles.successIcon} />
+                    <LuCheckCircle size={48} className={styles.successIcon} />
                     <h3 className={styles.successTitle}>Thank You!</h3>
                     <p className={styles.successText}>
                       We&apos;ll get back to you within 24 hours.
