@@ -1,0 +1,92 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+.closeBtn:hover {
+  color: #2d2d2d;
+}
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  background: #f0f7f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #4a7c59;
+}
+.modal h3 {
+  color: #2d2d2d;
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+}
+.modal p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+.loginBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #4a7c59;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.loginBtn:hover {
+  background: #3d6b4a;
+}
+.signupBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #fff;
+  color: #4a7c59;
+  border: 2px solid #4a7c59;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.signupBtn:hover {
+  background: #f0f7f2;
+}

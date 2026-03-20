@@ -1,4 +1,24 @@
-.card {
+.card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.imageWrapper { position: relative; height: 220px; overflow: hidden; background: #f0ebe3; }
+.image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.card:hover .image { transform: scale(1.05); }
+.badgeWrapper { position: absolute; top: 12px; left: 12px; }
+.content { padding: 18px; }
+.category { font-size: 0.75rem; color: #4a7c59; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin: 0 0 6px; }
+.name { font-size: 1.05rem; color: #2d2d2d; margin: 0 0 4px; font-weight: 600; line-height: 1.3; }
+.weight { font-size: 0.85rem; color: #999; margin: 0 0 14px; }
+.footer { display: flex; justify-content: space-between; align-items: center; }
+.price { font-size: 1.25rem; font-weight: 800; color: #2d2d2d; }
+.addBtn { display: flex; align-items: center; gap: 6px; background: #4a7c59; color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.addBtn:hover:not(.disabled) { background: #3d6b4a; }
+.disabled { background: #ccc; cursor: not-allowed; color: #999; }
+.added { background: #28a745; }
+
+
+
+
+/* .card {
   background: white;
   border-radius: 16px;
   overflow: hidden;
@@ -173,4 +193,4 @@
   .card:hover {
     transform: none;
   }
-}
+} */

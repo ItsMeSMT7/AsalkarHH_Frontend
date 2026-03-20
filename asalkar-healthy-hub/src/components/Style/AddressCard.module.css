@@ -1,0 +1,15 @@
+.card { background: #faf8f5; border: 2px solid #e0d6c8; border-radius: 12px; padding: 16px; transition: border-color 0.3s; }
+.selectable { cursor: pointer; }
+.selectable:hover { border-color: #4a7c59; }
+.selected { border-color: #4a7c59; background: #f0f7f2; }
+.header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.label { background: #4a7c59; color: #fff; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.defaultBadge { display: flex; align-items: center; gap: 4px; background: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+.body p { margin: 2px 0; color: #666; font-size: 0.9rem; }
+.name { font-weight: 600; color: #2d2d2d !important; }
+.phone { margin-top: 6px !important; }
+.actions { display: flex; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e8e0d4; }
+.editBtn, .defaultBtn { display: flex; align-items: center; gap: 4px; background: none; border: 1px solid #4a7c59; color: #4a7c59; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+.editBtn:hover, .defaultBtn:hover { background: #4a7c59; color: #fff; }
+.deleteBtn { display: flex; align-items: center; background: none; border: 1px solid #dc3545; color: #dc3545; padding: 4px 8px; border-radius: 6px; cursor: pointer; margin-left: auto; }
+.deleteBtn:hover { background: #dc3545; color: #fff; }

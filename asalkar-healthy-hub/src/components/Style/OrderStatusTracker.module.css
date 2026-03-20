@@ -1,0 +1,18 @@
+.tracker { text-align: center; }
+.steps { display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.compact .stepLabel { display: none; }
+.step { display: flex; flex-direction: column; align-items: center; position: relative; min-width: 100px; }
+.compact .step { min-width: 60px; }
+.stepIcon { width: 48px; height: 48px; border-radius: 50%; background: #e0d6c8; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: all 0.3s; position: relative; z-index: 1; }
+.compact .stepIcon { width: 36px; height: 36px; font-size: 1rem; }
+.step.active .stepIcon { background: #e8f5e9; box-shadow: 0 0 0 3px #4a7c59; }
+.stepLabel { margin-top: 8px; font-size: 0.8rem; color: #999; font-weight: 600; }
+.step.active .stepLabel { color: #4a7c59; }
+.connector { position: absolute; top: 24px; left: 74px; width: calc(100% - 48px); height: 3px; background: #e0d6c8; z-index: 0; }
+.compact .connector { top: 18px; left: 48px; width: calc(100% - 36px); }
+.activeConnector { background: #4a7c59; }
+.statusMessage { color: #666; font-size: 0.9rem; margin: 0; }
+.cancelledBar { display: flex; align-items: center; justify-content: center; gap: 10px; background: #fdecea; color: #dc3545; padding: 14px 20px; border-radius: 10px; font-weight: 700; font-size: 1rem; }
+.cancelledIcon { font-size: 1.3rem; }
+.cancelRequestBadge { display: inline-block; background: #fff3cd; color: #856404; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; margin-bottom: 16px; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }

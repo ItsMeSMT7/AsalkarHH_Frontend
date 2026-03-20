@@ -1,0 +1,211 @@
+.profileSection {
+  padding: 60px 20px;
+  background: #f5f0e8;
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.successMsg {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.errorMsg {
+  background: #fdecea;
+  color: #dc3545;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profileCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0ebe3;
+}
+
+.cardHeader h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2d2d2d;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #4a7c59;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.editBtn:hover {
+  background: #3d6b4a;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: #4a7c59;
+}
+
+.infoRow div span {
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoRow div p {
+  margin: 4px 0 0;
+  font-size: 1rem;
+  color: #2d2d2d;
+  font-weight: 500;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.inputGroup input {
+  padding: 10px 14px;
+  border: 2px solid #e0d6c8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inputGroup input:focus {
+  border-color: #4a7c59;
+}
+
+.disabledInput {
+  background: #f0ebe3;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.editActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.saveBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #4a7c59;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e0d6c8;
+  color: #2d2d2d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.emptyText {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+.quickLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.quickLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #4a7c59;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quickLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .profileCard { padding: 20px; }
+  .cardHeader { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .addressGrid { grid-template-columns: 1fr; }
+}
