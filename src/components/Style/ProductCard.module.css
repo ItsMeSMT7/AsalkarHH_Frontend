@@ -1,0 +1,159 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 15px var(--color-card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--color-card-hover-shadow);
+}
+
+/* ── Image ── */
+.imageWrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.image {
+  max-height: 190px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.4s;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.badgeWrapper {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+/* ── Content ── */
+.content {
+  padding: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px;
+}
+
+.name {
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  margin: 0 0 4px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.weight {
+  font-size: 0.85rem;
+  color: var(--color-text-tertiary);
+  margin: 0 0 14px;
+}
+
+/* ── Footer Row ── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addBtn:hover:not(.disabled) {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.addBtn:active:not(.disabled) {
+  transform: translateY(0);
+}
+
+.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  color: var(--color-text-tertiary);
+}
+
+.added {
+  background: var(--color-success);
+}
+
+/* ── Responsive ── */
+@media (max-width: 575px) {
+  .imageWrapper {
+    height: 170px;
+    padding: 12px;
+  }
+
+  .image {
+    max-height: 150px;
+  }
+
+  .content {
+    padding: 14px;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .addBtn {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (hover: none) {
+  .card:hover {
+    transform: none;
+  }
+}

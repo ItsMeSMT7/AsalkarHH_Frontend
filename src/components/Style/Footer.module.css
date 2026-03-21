@@ -1,0 +1,130 @@
+.footer {
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 50px 20px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* ── Brand Column ── */
+.brand h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 0 14px;
+}
+
+.brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.owner {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* ── Links & Contact Columns ── */
+.links h4,
+.contact h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 16px;
+}
+
+.links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.links a:hover {
+  color: var(--color-primary-light);
+  transform: translateX(3px);
+}
+
+/* ── Contact Items ── */
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.contactItem svg {
+  color: var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #25d366;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  transition: opacity 0.3s;
+}
+
+.whatsapp:hover {
+  opacity: 0.85;
+}
+
+/* ── Bottom Bar ── */
+.bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.bottom p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #888;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .links a:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .contactItem {
+    justify-content: center;
+  }
+
+  .whatsapp {
+    justify-content: center;
+  }
+}

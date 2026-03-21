@@ -1,0 +1,150 @@
+.section {
+  padding: 60px 20px;
+  background: var(--color-bg-cream);
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loadingText {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: 40px;
+}
+
+/* ── Empty State ── */
+.emptySection {
+  padding: 80px 20px;
+  background: var(--color-bg-cream);
+  text-align: center;
+}
+
+.emptyState {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  color: var(--color-border);
+  margin-bottom: 20px;
+}
+
+.emptyState h3 {
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+.emptyState p {
+  color: var(--color-text-secondary);
+  margin: 0 0 25px;
+}
+
+.shopBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.shopBtn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* ── Order Card ── */
+.orderCard {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.orderId {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.orderDate {
+  color: var(--color-text-tertiary);
+  font-size: 0.85rem;
+}
+
+.orderBody {
+  padding: 20px;
+}
+
+.orderInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.itemCount,
+.paymentInfo {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.totalAmount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.totalAmount span {
+  color: var(--color-text-secondary);
+}
+
+.totalAmount strong {
+  color: var(--color-text-primary);
+  font-size: 1.15rem;
+}
+
+.viewBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: gap 0.2s;
+}
+
+.viewBtn:hover {
+  gap: 8px;
+}

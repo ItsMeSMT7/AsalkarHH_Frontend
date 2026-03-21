@@ -1,0 +1,347 @@
+.checkoutSection {
+  padding: 60px 20px;
+  background: var(--color-bg-cream);
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.errorMsg {
+  background: #fdecea;
+  color: var(--color-error);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ── Two-column Layout ── */
+.checkoutLayout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Section Cards ── */
+.section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  margin: 0 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+.sectionLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0 0 12px;
+}
+
+/* ── Address Options ── */
+.addressCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.addressOption {
+  position: relative;
+  padding: 14px 18px;
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.addressOption:hover {
+  border-color: var(--color-primary);
+}
+
+.addressOption.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-hover);
+}
+
+.checkIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: var(--color-primary);
+}
+
+.addressOption strong {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+}
+
+.addressOption p {
+  margin: 3px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.newAddrBtn {
+  background: none;
+  border: 2px dashed var(--color-primary);
+  color: var(--color-primary);
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.newAddrBtn:hover {
+  background: var(--color-bg-hover);
+}
+
+/* ── Shipping Form ── */
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.formGroup input {
+  padding: 10px 14px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus {
+  border-color: var(--color-primary);
+}
+
+/* ── Payment Options ── */
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.paymentOption:hover {
+  border-color: var(--color-primary);
+}
+
+.paymentOption.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-hover);
+}
+
+.paymentOption input {
+  display: none;
+}
+
+.paymentOption div {
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentOption div strong {
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+
+.paymentOption div span {
+  color: var(--color-text-tertiary);
+  font-size: 0.8rem;
+}
+
+.paymentOption svg {
+  color: var(--color-primary);
+}
+
+/* ── Order Summary Sidebar ── */
+.rightCol {}
+
+.orderSummary {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 100px;
+}
+
+.orderSummary h3 {
+  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  margin: 0 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+.summaryItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summaryItem img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: contain;
+  background: var(--color-bg-secondary);
+}
+
+.summaryItem div {
+  flex: 1;
+}
+
+.itemName {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.itemMeta {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: var(--color-text-tertiary);
+}
+
+.itemTotal {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ── Price Breakdown ── */
+.summaryBreakdown {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 16px;
+}
+
+.breakdownRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.free {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.breakdownTotal {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 2px solid var(--color-border-light);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* ── Place Order Button ── */
+.placeOrderBtn {
+  width: 100%;
+  padding: 14px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.placeOrderBtn:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.placeOrderBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .checkoutLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .orderSummary {
+    position: static;
+  }
+}
+
+@media (max-width: 500px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}

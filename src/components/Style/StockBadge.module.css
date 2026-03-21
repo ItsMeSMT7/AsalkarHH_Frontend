@@ -1,0 +1,46 @@
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.outOfStock {
+  background: var(--color-error);
+  color: #fff;
+}
+
+.lowStock {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid var(--color-warning);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.bestseller {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.popular {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.newBadge {
+  background: #2196f3;
+  color: #fff;
+}
+
+.default {
+  background: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}

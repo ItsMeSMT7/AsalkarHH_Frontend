@@ -1,0 +1,205 @@
+.section {
+  padding: 60px 20px;
+  background: var(--color-bg-cream);
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.loadingText {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: 40px;
+}
+
+.successBanner {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 14px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/* ── Tracker Card ── */
+.trackerCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Two-column Layout ── */
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.sideCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Detail Cards ── */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+/* ── Items Table ── */
+.itemsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.itemsTable th {
+  text-align: left;
+  padding: 10px 8px;
+  font-size: 0.8rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+.itemsTable td {
+  padding: 12px 8px;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-bg-cream);
+}
+
+.subtotalCell {
+  font-weight: 600;
+}
+
+.itemsTable tfoot td {
+  padding-top: 14px;
+  border-bottom: none;
+}
+
+.totalLabel {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.totalValue {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+/* ── Address & Payment ── */
+.addressText {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.paymentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paymentDetails div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentDetails span {
+  color: var(--color-text-tertiary);
+  font-size: 0.9rem;
+}
+
+.paymentDetails strong {
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+}
+
+/* ── Action Buttons ── */
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.whatsappBtn:hover {
+  background: #1da851;
+  transform: translateY(-1px);
+}
+
+.cancelBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-error);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cancelBtn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .itemsTable th:nth-child(2),
+  .itemsTable td:nth-child(2) {
+    display: none;
+  }
+
+  .trackerCard {
+    padding: 20px;
+  }
+}
