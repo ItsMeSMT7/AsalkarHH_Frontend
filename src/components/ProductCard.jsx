@@ -15,6 +15,14 @@ const ProductCard = ({ product }) => {
     product.stockStatus === 'OUT_OF_STOCK' || product.stock === 0;
 
   const handleAddToCart = () => {
+    if (product.stock === undefined) {
+      alert('Product currently not available. It will be available for order once the admin updates it.');
+      return;
+    }
+    if (isOutOfStock) {
+      alert('The product you selected is currently out of stock.');
+      return;
+    }
     const result = addToCart(product, 1);
     if (result === false) {
       setLocalShowModal(true);
@@ -36,16 +44,15 @@ const ProductCard = ({ product }) => {
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <img
-            src={getImageUrl(product.imageUrl)}
+            src={product.imageUrl ? getImageUrl(product.imageUrl) : product.image}
             alt={product.name}
             className={styles.image}
-            loading="lazy"
           />
           <div className={styles.badgeWrapper}>
             <StockBadge
               stockStatus={product.stockStatus}
               stockMessage={product.stockMessage}
-              badge={product.badge}
+              badge={product.stock !== undefined ? product.badge : null}
             />
           </div>
         </div>
@@ -53,18 +60,30 @@ const ProductCard = ({ product }) => {
         <div className={styles.content}>
           <p className={styles.category}>{product.category}</p>
           <h3 className={styles.name}>{product.name}</h3>
-          <p className={styles.weight}>{product.weight}</p>
+          {product.description && (
+            <p 
+              className={styles.description}
+              title={product.description}
+              style={{ fontSize: '0.85rem', color: '#666', margin: '4px 0 8px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+            >
+              {product.description}
+            </p>
+          )}
+          <p className={styles.weight}>{product.weight || product.size}</p>
 
           <div className={styles.footer}>
-            <span className={styles.price}>
-              ₹{product.price?.toFixed ? product.price.toFixed(2) : product.price}
-            </span>
+            {product.stock !== undefined ? (
+              <span className={styles.price}>
+                ₹{product.price?.toFixed ? product.price.toFixed(2) : product.price}
+              </span>
+            ) : (
+              <span className={styles.price}></span>
+            )}
             <button
               className={`${styles.addBtn} ${
                 isOutOfStock ? styles.disabled : ''
               } ${added ? styles.added : ''}`}
               onClick={handleAddToCart}
-              disabled={isOutOfStock}
             >
               <ShoppingCart size={16} />
               {isOutOfStock

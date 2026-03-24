@@ -37,6 +37,7 @@ const OrderHistory = () => {
     const colors = {
       PENDING: '#f0ad4e', CONFIRMED: '#4a7c59', SHIPPED: '#2196f3',
       DELIVERED: '#28a745', CANCEL_REQUESTED: '#ff9800', CANCELLED: '#dc3545',
+      PAID: '#28a745', FAILED: '#dc3545'
     };
     return colors[status] || '#666';
   };
@@ -96,7 +97,7 @@ const OrderHistory = () => {
                 <div className={styles.orderInfo}>
                   <div className={styles.itemCount}>{order.items?.length || 0} item(s)</div>
                   <div className={styles.paymentInfo}>
-                    {order.paymentType} • <span style={{ color: getStatusColor(order.paymentStatus) }}>{order.paymentStatus}</span>
+                {order.paymentType} • <span style={{ color: getStatusColor(order.paymentStatus), fontWeight: 600 }}>{order.paymentStatus === 'PAID' ? 'SUCCESSFUL' : order.paymentStatus}</span>
                   </div>
                 </div>
                 <OrderStatusTracker orderStatus={order.orderStatus} deliveryDate={order.deliveryDate} compact />

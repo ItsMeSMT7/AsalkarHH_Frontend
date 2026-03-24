@@ -5,12 +5,15 @@ import { getImageUrl } from '../api/apiClient';
 import styles from './Style/AdminProductModal.module.css';
 
 const CATEGORIES = [
-  'Coconut Oil',
-  'Groundnut Oil',
-  'Sesame Oil',
-  'Mustard Oil',
-  'Sunflower Oil',
-  'Flaxseed Oil',
+  'Cold Pressed Coconut Oil',
+  'Cold Pressed Groundnut Oil',
+  'Cold Pressed Safflower Oil',
+  'Cold Pressed Sunflower Oil',
+  'Safflower Oil Cake (Pend)',
+  'Sunflower Oil Cake (Pend)',
+  'Groundnut Oil Cake (Pend)',
+  'Coconut Oil Cake (Pend)',
+  
 ];
 
 const BADGES = ['', 'Bestseller', 'Popular', 'New'];

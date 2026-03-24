@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className={styles.contactItem}>
               <Mail size={16} />
-              <span>asalkarhealthyhub@gmail.com</span>
+              <span>asalkarhh@gmail.com</span>
             </div>
             <a
               href="https://wa.me/918421429515"

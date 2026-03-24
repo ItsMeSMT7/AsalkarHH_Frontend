@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LogIn, Eye, EyeOff, Mail, Lock } from 'lucide-react';
@@ -17,7 +17,13 @@ const Login = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  if (isAuthenticated) { navigate(returnUrl, { replace: true }); return null; }
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate(returnUrl, { replace: true });
+    }
+  }, [isAuthenticated, navigate, returnUrl]);
+
+  if (isAuthenticated) return null;
 
   const handleChange = (e) => { setFormData({ ...formData, [e.target.name]: e.target.value }); setError(''); };
 

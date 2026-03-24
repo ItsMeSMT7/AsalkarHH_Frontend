@@ -1,8 +1,9 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { LuShoppingCart, LuArrowRight } from 'react-icons/lu'
 import { fadeInUp, staggerContainer } from '../utils/animations'
-import { featuredProducts } from '../data/data'
+import { getImageUrl } from '../api/apiClient'
 import styles from './Style/FeaturedProducts.module.css'
 
 const getBadgeClass = (badge) => {
@@ -13,6 +14,65 @@ const getBadgeClass = (badge) => {
 }
 
 const FeaturedProducts = () => {
+  const [featuredProducts, setFeaturedProducts] = useState([])
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/api/products')
+        if (response.ok) {
+          const responseData = await response.json()
+          const productList = responseData.success ? responseData.data : (Array.isArray(responseData) ? responseData : [])
+          if (productList.length > 0) {
+            const mappedProducts = productList.map(item => ({
+              ...item,
+              size: item.weight,
+              image: item.imageUrl,
+              inStock: item.stockStatus !== 'OUT_OF_STOCK'
+            }))
+
+            const targetCategories = ['coconut', 'sunflower', 'groundnut', 'safflower'];
+            const finalFeatured = [];
+
+            targetCategories.forEach(cat => {
+              // Try to find the 500ml bottle for the specific category
+              let product = mappedProducts.find(p => 
+                (p.category || '').toLowerCase().includes(cat) && 
+                (p.size || '').toLowerCase().includes('500')
+              );
+              
+              // Fallback: If 500ml is not found (deleted/hidden), pick the first available oil for that category
+              if (!product) {
+                product = mappedProducts.find(p => 
+                  (p.category || '').toLowerCase().includes(cat) && 
+                  !(p.category || '').toLowerCase().includes('pend')
+                );
+              }
+
+              if (product) {
+                finalFeatured.push(product);
+              }
+            });
+
+            // Fallback: If we somehow still don't have 4 products, fill the remaining spots to keep the UI from breaking
+            if (finalFeatured.length < 4) {
+              mappedProducts.forEach(p => {
+                if (finalFeatured.length < 4 && !finalFeatured.find(f => f.id === p.id)) {
+                  finalFeatured.push(p);
+                }
+              });
+            }
+
+            setFeaturedProducts(finalFeatured)
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch featured products:", error)
+      }
+    }
+    fetchProducts()
+  }, [])
+
   return (
     <section className={styles.section} id="featured-products">
       <div className="container">
@@ -46,23 +106,26 @@ const FeaturedProducts = () => {
             >
               <Link to="/products" className={styles.card}>
                 <div className={styles.imageContainer}>
-                  {product.badge && (
+                  {product.stock !== undefined && product.badge && (
                     <span className={`${styles.badge} ${getBadgeClass(product.badge)}`}>
                       {product.badge}
                     </span>
                   )}
                   <img
-                    src={product.image}
+                    src={product.imageUrl ? getImageUrl(product.imageUrl) : product.image}
                     alt={product.name}
                     className={styles.productImage}
-                    loading="lazy"
                   />
                 </div>
                 <div className={styles.cardContent}>
                   <h3 className={styles.productName}>{product.name}</h3>
                   <p className={styles.productDesc}>{product.description}</p>
                   <div className={styles.priceRow}>
-                    <span className={styles.price}>From ₹{product.startingPrice}</span>
+                    {product.stock !== undefined ? (
+                      <span className={styles.price}>₹{product.price}</span>
+                    ) : (
+                      <span className={styles.price}></span>
+                    )}
                     <span className={styles.viewLink}>
                       View <LuArrowRight size={14} />
                     </span>

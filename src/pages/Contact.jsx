@@ -42,6 +42,30 @@ const Contact = () => {
       return
     }
 
+    // 1. Save to backend database for Admin Dashboard -> Customer Enquiries
+    try {
+      const dbRes = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+          subject: `Website Enquiry from ${form.name}`,
+        }),
+      })
+      if (!dbRes.ok) {
+        const errTxt = await dbRes.text()
+        console.error('Database returned status:', dbRes.status, 'Response:', errTxt)
+      }
+    } catch (dbError) {
+      console.error('Failed to save enquiry to database:', dbError)
+    }
+
+    // 2. Send email via EmailJS
     try {
       await emailjs.send(
         'service_zwmisx7', // Paste your real Service ID here (e.g., 'service_xyz123')
@@ -54,15 +78,15 @@ const Contact = () => {
         },
         'amoYDw_1-KhXAgCYu'
       )
-
-      setSubmitted(true)
-      setForm({ name: '', phone: '', email: '', message: '' })
-      setErrors({})
-      setTimeout(() => setSubmitted(false), 5000)
     } catch (error) {
       console.error('Failed to send email:', error)
-      alert('Something went wrong. Please try again or contact us directly.')
+      // We continue without throwing an alert so the customer still gets the "Thank You" message
     }
+
+    setSubmitted(true)
+    setForm({ name: '', phone: '', email: '', message: '' })
+    setErrors({})
+    setTimeout(() => setSubmitted(false), 5000)
   }
 
   const infoItems = [

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { UserPlus, Eye, EyeOff, Mail, Lock, Phone, User } from 'lucide-react';
@@ -18,7 +18,13 @@ const Signup = () => {
   const [apiError, setApiError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  if (isAuthenticated) { navigate(returnUrl, { replace: true }); return null; }
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate(returnUrl, { replace: true });
+    }
+  }, [isAuthenticated, navigate, returnUrl]);
+
+  if (isAuthenticated) return null;
 
   const handleChange = (e) => { setFormData({ ...formData, [e.target.name]: e.target.value }); setErrors({ ...errors, [e.target.name]: '' }); setApiError(''); };
 

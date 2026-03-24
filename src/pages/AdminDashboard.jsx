@@ -93,7 +93,8 @@ const AdminDashboard = () => {
   const handleUpdateOrderStatus = async (orderId, status, reason) => {
     setStatusLoading(orderId);
     try {
-      const data = { status };
+      // Sending both 'status' and 'orderStatus' guarantees it maps correctly to your Java DTO
+      const data = { status: status, orderStatus: status };
       if (reason) data.reason = reason;
       await updateOrderStatus(orderId, data);
       await loadDashboard();
@@ -188,7 +189,7 @@ const AdminDashboard = () => {
     };
 
   const getStatusColor = (status) => {
-    const c = { PENDING: '#f0ad4e', CONFIRMED: '#4a7c59', SHIPPED: '#2196f3', DELIVERED: '#28a745', CANCEL_REQUESTED: '#ff9800', CANCELLED: '#dc3545', NEW: '#2196f3', READ: '#666', REPLIED: '#4a7c59', CLOSED: '#999', APPROVED: '#28a745', DECLINED: '#dc3545' };
+    const c = { PENDING: '#f0ad4e', CONFIRMED: '#4a7c59', SHIPPED: '#2196f3', DELIVERED: '#28a745', CANCEL_REQUESTED: '#ff9800', CANCELLED: '#dc3545', NEW: '#2196f3', READ: '#666', REPLIED: '#4a7c59', CLOSED: '#999', APPROVED: '#28a745', DECLINED: '#dc3545', PAID: '#28a745', FAILED: '#dc3545' };
     return c[status] || '#666';
   };
 
@@ -275,7 +276,7 @@ const AdminDashboard = () => {
                         <span>{order.userFullName || `${order.firstName} ${order.lastName}`}</span>
                         <span>₹{order.totalAmount?.toFixed(2)}</span>
                         <span style={{ color: getStatusColor(order.orderStatus) }} className={styles.statusBadge}>{order.orderStatus}</span>
-                        <span className={styles.payBadge}>{order.paymentType} • {order.paymentStatus}</span>
+                        <span className={styles.payBadge}>{order.paymentType} • <span style={{ color: getStatusColor(order.paymentStatus), fontWeight: 600 }}>{order.paymentStatus === 'PAID' ? 'SUCCESSFUL' : order.paymentStatus}</span></span>
                         <span className={styles.dateText}>{formatDate(order.orderDate)}</span>
                       </div>
                       {expandedOrder === order.id ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
@@ -425,7 +426,7 @@ const AdminDashboard = () => {
                             <p key={item.id}>{item.productName} × {item.quantity} = ₹{item.subtotal?.toFixed(2)}</p>
                           ))}
                           <p><strong>Total: ₹{cr.order.totalAmount?.toFixed(2)}</strong></p>
-                          <p>Payment: {cr.order.paymentType} ({cr.order.paymentStatus})</p>
+                          <p>Payment: {cr.order.paymentType} (<span style={{ color: getStatusColor(cr.order.paymentStatus), fontWeight: 600 }}>{cr.order.paymentStatus === 'PAID' ? 'SUCCESSFUL' : cr.order.paymentStatus}</span>)</p>
                         </div>
                       )}
                       {cr.status === 'PENDING' && (

@@ -3,6 +3,7 @@ import { LuX, LuMinus, LuPlus, LuTrash2, LuShoppingBag } from 'react-icons/lu'
 import { FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import { getImageUrl } from '../api/apiClient'
 import styles from './Style/Cart.module.css'
 
 const Cart = () => {
@@ -72,7 +73,7 @@ const Cart = () => {
                 cartItems.map(item => (
                   <div key={item.id} className={styles.cartItem}>
                     <div className={styles.itemImage}>
-                      <img src={item.image} alt={item.name} loading="lazy" />
+                      <img src={getImageUrl(item.imageUrl || item.image)} alt={item.name} />
                     </div>
                     <div className={styles.itemInfo}>
                       <h4 className={styles.itemName}>{item.name}</h4>
